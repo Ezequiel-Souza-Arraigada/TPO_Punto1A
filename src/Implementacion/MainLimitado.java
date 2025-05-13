@@ -25,9 +25,9 @@ public class MainLimitado {
         System.out.println("Elemento superior después de desapilar: " + pila.getTop());  // 200
         System.out.println("Cantidad actual: " + pila.getCantidadActual());
 
-        pila.remove();
-        pila.remove();
-        pila.remove();  // Desapilar vacía
+        pila.remove(); // 100
+        pila.remove(); // 0
+        pila.remove(); // Desapilar vacía
 
         System.out.println("¿La pila está vacía después de desapilar todo? " + pila.isEmpty());
     }
