@@ -5,7 +5,7 @@ import Interfaz.InterfazPila;
 public class PilaLimitada implements InterfazPila {
 
     private Nodo primero;
-    private int capacidadMaxima;
+    private final int capacidadMaxima;
     private int cantidadActual;
 
     public PilaLimitada(int capacidadMaxima) {
@@ -20,8 +20,7 @@ public class PilaLimitada implements InterfazPila {
             System.out.println("Error: la pila alcanzó su capacidad máxima (" + capacidadMaxima + ")");
             return;
         }
-        Nodo nuevo = new Nodo(a, primero);
-        primero = nuevo;
+        primero = new Nodo(a, primero);
         cantidadActual++;
     }
 
